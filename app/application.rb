@@ -20,6 +20,7 @@ class Application
         @@cart.each do |my_item|
           resp.write "#{my_item}\n"
         end
+      end
     else
       resp.write "Path Not Found"
     end
