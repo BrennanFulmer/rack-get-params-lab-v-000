@@ -16,6 +16,7 @@ class Application
       resp.write handle_search(search_term)
     elsif req.path.match(/items/)
       if @@cart.empty?
+        
       else
         @@cart.each do |my_item|
           resp.write "#{my_item}\n"
