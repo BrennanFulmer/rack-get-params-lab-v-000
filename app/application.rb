@@ -15,9 +15,11 @@ class Application
       search_term = req.params["q"]
       resp.write handle_search(search_term)
     elsif req.path.match(/items/)
-      @@cart.each do |my_item|
-        resp.write "#{my_item}\n"
-      end
+      if 
+      else
+        @@cart.each do |my_item|
+          resp.write "#{my_item}\n"
+        end
     else
       resp.write "Path Not Found"
     end
